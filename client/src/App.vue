@@ -16,23 +16,25 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <v-container>
+        <Index />
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Index from "./views/indexView.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Index
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>
