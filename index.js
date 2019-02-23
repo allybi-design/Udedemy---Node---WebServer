@@ -3,7 +3,7 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-// app.use(express.static(__dirname+"/public"))
+app.use(express.static(__dirname+"/public"))
 const PORT = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
@@ -13,8 +13,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.status(200).send("<h1>Home Page</h1>");
+app.get("/about", (req, res) => {
+  res.status(200).send("<h1>About Page</h1>");
 });
 
 app.get("/test", (req, res) => {
